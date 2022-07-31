@@ -17,11 +17,13 @@ class OpenposeDemo:
     def __init__(self):
         self.args = Args()
 
-    def process_image(self):
+    def process_image(self, imageName):
         try:
             # Flags
             parser = argparse.ArgumentParser()
-            parser.add_argument("--image_path", default="../../examples/media/COCO_val2014_000000000192.jpg",
+            # parser.add_argument("--image_path", default="../../examples/media/COCO_val2014_000000000589.jpg",
+            #                     help="Process an image. Read all standard formats (jpg, png, bmp, etc.).")
+            parser.add_argument("--image_path", default="../../examples/media/" + imageName,
                                 help="Process an image. Read all standard formats (jpg, png, bmp, etc.).")
             parser.add_argument("--bind", default=[],
                                 help="patch")

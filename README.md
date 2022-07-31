@@ -6,6 +6,6 @@ cd ./openpose-docker-deploy
 sudo docker build -t openpose
 
 
-docker run --gpus all -e NVIDIA_VISIBLE_DEVICES=0 --name openpose -it openpose /bin/bash
+docker run -d -p 5000:5000 --gpus all -e NVIDIA_VISIBLE_DEVICES=0 --name openpose -it openpose /bin/bash
 
 gunicorn --bind 0.0.0.0:5000 wsgi:app

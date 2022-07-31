@@ -19,13 +19,12 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = '5f352379324c22463451387a0aec5d2f'
 
 pose_estimation = OpenposeDemo()
-
-pose_estimation.process_image()
+# for testing purpose
+# pose_estimation.process_image('COCO_val2014_000000000192.jpg')
 
 
 @app.route('/')
 def hello_world():  # put application's code here
-
     return 'Hello World!'
 
 
@@ -47,9 +46,9 @@ def upload_img():
         return redirect(request.url)
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
-        print('Uploading file ' + filename + ' as image.jpg')
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], 'image.jpg'))
-        result = pose_estimation.process_image()
+        print('Uploading file: ' + filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        result = pose_estimation.process_image(filename)
         return result
     return 'Not allowed file extension'
 

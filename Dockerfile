@@ -49,3 +49,6 @@ WORKDIR /openpose/examples/tutorial_api_python
 COPY ./openpose_demo.py .
 COPY ./app.py .
 COPY ./wsgi.py .
+
+EXPOSE 5000
+

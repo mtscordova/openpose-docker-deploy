@@ -8,9 +8,9 @@ import argparse
 import pyopenpose as op
 
 try:
-    """
     # Import Openpose (Windows/Ubuntu/OSX)
     dir_path = os.path.dirname(os.path.realpath(__file__))
+    """
     try:
         # Windows Import
         if platform == "win32":

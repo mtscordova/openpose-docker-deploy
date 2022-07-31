@@ -47,4 +47,3 @@ WORKDIR /openpose/examples/tutorial_api_python
 
 COPY ./demo.py .
 
-RUN python3 demo.py

@@ -23,8 +23,8 @@ RUN git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git .
 
 #build it
 WORKDIR /openpose/build
-#RUN cmake -DBUILD_PYTHON=ON .. && make -j `nproc`
-RUN cmake -DBUILD_PYTHON=ON -DCUDA_ARCH=Manual -DCUDA_ARCH_BIN="80 86 87" -DCUDA_ARCH_PTX="86" .. && make -j `nproc`
+RUN cmake -DBUILD_PYTHON=ON .. && make -j `nproc`
+#RUN cmake -DBUILD_PYTHON=ON -DCUDA_ARCH=Manual -DCUDA_ARCH_BIN="80 86 87" -DCUDA_ARCH_PTX="86" .. && make -j `nproc`
 WORKDIR /openpose
 
 RUN pip3 install Flask Flask_Cors

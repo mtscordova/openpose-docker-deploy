@@ -20,7 +20,7 @@ app.secret_key = '5f352379324c22463451387a0aec5d2f'
 
 pose_estimation = OpenposeDemo()
 # for testing purpose
-# pose_estimation.process_image('COCO_val2014_000000000192.jpg')
+# pose_estimation.process_image('COCO_val2014_000000000589.jpg')
 
 
 @app.route('/')

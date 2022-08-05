@@ -14,7 +14,7 @@
 
 Please check:
 
-- https://hub.docker.com/r/cwaffles/openpose
+- https://github.com/esemeniuc/openpose-docker
 - https://hub.docker.com/r/cwaffles/openpose
 
 # Installation
